@@ -1,0 +1,154 @@
+
+/* Stats Grid */
+.admin-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 20px 24px;
+}
+
+/* Stat Card */
+.admin-stat-card {
+    min-width: 0;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #edf0f5;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px rgba(20, 30, 60, 0.03);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.admin-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(20, 30, 60, 0.08);
+}
+
+/* Card Top */
+.admin-stat-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+/* Icon Container */
+.admin-stat-icon {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    place-items: center;
+    border-radius: 13px;
+}
+
+/* Icon Colors */
+.admin-stat-purple {
+    color: #6965d8;
+    background: #eeeeff;
+}
+
+.admin-stat-blue {
+    color: #3984d6;
+    background: #eaf4ff;
+}
+
+.admin-stat-orange {
+    color: #e58a36;
+    background: #fff3e6;
+}
+
+.admin-stat-green {
+    color: #299b70;
+    background: #e7f8f0;
+}
+
+/* Trend Badge */
+.admin-stat-trend {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 9px;
+    color: #299b70;
+    background: #eaf8f1;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.admin-stat-trend svg {
+    flex-shrink: 0;
+}
+
+/* Stat Content */
+.admin-stat-content p {
+    margin: 0 0 9px;
+    color: #7c8799;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.admin-stat-content h2 {
+    margin: 0 0 7px;
+    color: #182230;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.admin-stat-content > span {
+    color: #a0a8b7;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Large Tablets */
+@media (max-width: 1100px) {
+    .admin-stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .admin-stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .admin-stat-card {
+        padding: 16px;
+        border-radius: 13px;
+    }
+
+    .admin-stat-card-top {
+        margin-bottom: 18px;
+    }
+
+    .admin-stat-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .admin-stat-content h2 {
+        font-size: 24px;
+    }
+
+    .admin-stat-trend {
+        gap: 3px;
+        padding: 5px 7px;
+        font-size: 9px;
+    }
+}
+
+/* Very Small Screens */
+@media (max-width: 360px) {
+    .admin-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

@@ -1,0 +1,115 @@
+.cashier-stats {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 20px;
+margin: 24px 0;
+}
+
+.cashier-stat-card {
+min-width: 0;
+padding: 22px;
+background: #ffffff;
+border: 1px solid #e8eaf0;
+border-radius: 16px;
+box-shadow: 0 4px 14px rgba(20, 30, 55, 0.04);
+transition:
+transform 0.2s ease,
+box-shadow 0.2s ease;
+}
+
+.cashier-stat-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 22px rgba(20, 30, 55, 0.08);
+}
+
+.cashier-stat-top {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 12px;
+}
+
+.cashier-stat-title {
+color: #687083;
+font-size: 14px;
+font-weight: 500;
+}
+
+.cashier-stat-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 44px;
+height: 44px;
+flex-shrink: 0;
+border-radius: 12px;
+font-size: 21px;
+}
+
+.cashier-stat-value {
+margin: 20px 0 8px;
+color: #202638;
+font-size: 28px;
+font-weight: 700;
+line-height: 1.2;
+overflow-wrap: anywhere;
+}
+
+.cashier-stat-description {
+margin: 0;
+color: #9299a8;
+font-size: 12px;
+}
+
+.cashier-stat-card.total {
+border-top: 3px solid #6478f5;
+}
+
+.cashier-stat-card.total .cashier-stat-icon {
+background: #eef0ff;
+}
+
+.cashier-stat-card.pending {
+border-top: 3px solid #f0a83c;
+}
+
+.cashier-stat-card.pending .cashier-stat-icon {
+background: #fff5e5;
+}
+
+.cashier-stat-card.completed {
+border-top: 3px solid #26a878;
+}
+
+.cashier-stat-card.completed .cashier-stat-icon {
+background: #e7f8f0;
+}
+
+.cashier-stat-card.revenue {
+border-top: 3px solid #159bb5;
+}
+
+.cashier-stat-card.revenue .cashier-stat-icon {
+background: #e5f7fb;
+}
+
+@media (max-width: 1100px) {
+.cashier-stats {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+
+@media (max-width: 560px) {
+.cashier-stats {
+grid-template-columns: 1fr;
+gap: 14px;
+}
+
+.cashier-stat-card {
+padding: 18px;
+}
+
+.cashier-stat-value {
+font-size: 25px;
+}
+}

@@ -1,0 +1,160 @@
+.cashier-payment-filters {
+padding: 24px;
+margin: 24px 0;
+background: #ffffff;
+border: 1px solid #e8eaf0;
+border-radius: 16px;
+box-shadow: 0 4px 14px rgba(20, 30, 55, 0.04);
+}
+
+.cashier-filter-heading {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 16px;
+margin-bottom: 24px;
+}
+
+.cashier-filter-heading h2 {
+margin: 0 0 6px;
+color: #202638;
+font-size: 20px;
+font-weight: 700;
+}
+
+.cashier-filter-heading p {
+margin: 0;
+color: #858c9c;
+font-size: 13px;
+}
+
+.cashier-reset-btn {
+padding: 10px 16px;
+color: #5965d9;
+background: #f0f1ff;
+border: 1px solid #e1e3ff;
+border-radius: 9px;
+font-size: 13px;
+font-weight: 600;
+cursor: pointer;
+transition:
+background 0.2s ease,
+transform 0.2s ease;
+}
+
+.cashier-reset-btn:hover {
+background: #e4e6ff;
+transform: translateY(-1px);
+}
+
+.cashier-filter-controls {
+display: grid;
+grid-template-columns: minmax(220px, 2fr) minmax(160px, 1fr) minmax(160px, 1fr);
+gap: 16px;
+align-items: end;
+}
+
+.cashier-search-wrapper {
+position: relative;
+min-width: 0;
+}
+
+.cashier-search-icon {
+position: absolute;
+top: 50%;
+left: 14px;
+font-size: 15px;
+transform: translateY(-50%);
+pointer-events: none;
+}
+
+.cashier-search-input {
+box-sizing: border-box;
+width: 100%;
+min-height: 44px;
+padding: 12px 14px 12px 42px;
+color: #252b3b;
+background: #fafbfe;
+border: 1px solid #e0e4ed;
+border-radius: 9px;
+outline: none;
+font-size: 13px;
+transition:
+border-color 0.2s ease,
+box-shadow 0.2s ease;
+}
+
+.cashier-search-input::placeholder {
+color: #a0a6b4;
+}
+
+.cashier-search-input:focus {
+background: #ffffff;
+border-color: #6478f5;
+box-shadow: 0 0 0 3px rgba(100, 120, 245, 0.12);
+}
+
+.cashier-filter-group {
+display: flex;
+flex-direction: column;
+gap: 8px;
+min-width: 0;
+}
+
+.cashier-filter-group label {
+color: #535b6d;
+font-size: 12px;
+font-weight: 600;
+}
+
+.cashier-filter-group select {
+box-sizing: border-box;
+width: 100%;
+min-height: 44px;
+padding: 10px 12px;
+color: #343b4d;
+background: #fafbfe;
+border: 1px solid #e0e4ed;
+border-radius: 9px;
+outline: none;
+font-size: 13px;
+cursor: pointer;
+}
+
+.cashier-filter-group select:focus {
+border-color: #6478f5;
+box-shadow: 0 0 0 3px rgba(100, 120, 245, 0.12);
+}
+
+@media (max-width: 900px) {
+.cashier-filter-controls {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cashier-search-wrapper {
+grid-column: 1 / -1;
+}
+}
+
+@media (max-width: 560px) {
+.cashier-payment-filters {
+padding: 18px;
+}
+
+.cashier-filter-heading {
+align-items: flex-start;
+flex-direction: column;
+}
+
+.cashier-filter-controls {
+grid-template-columns: 1fr;
+}
+
+.cashier-search-wrapper {
+grid-column: auto;
+}
+
+.cashier-reset-btn {
+width: 100%;
+}
+}

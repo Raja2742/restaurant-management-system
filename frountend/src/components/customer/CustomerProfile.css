@@ -1,0 +1,118 @@
+.customer-profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.profile-trigger {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #fff0e5;
+    color: #e87524;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.profile-avatar-large {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 20px;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    z-index: 1100;
+    width: 290px;
+    padding: 18px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.profile-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1090;
+    background: transparent;
+}
+
+.profile-user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-user-info h3 {
+    font-size: 15px;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.profile-user-info p {
+    font-size: 12px;
+    color: #888;
+    overflow-wrap: anywhere;
+}
+
+.profile-divider {
+    height: 1px;
+    background: #eee;
+    margin: 17px 0;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.profile-detail-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profile-detail-row span {
+    color: #999;
+    font-size: 12px;
+}
+
+.profile-detail-row strong {
+    color: #333;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.profile-logout-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px;
+    border: none;
+    border-radius: 7px;
+    background: #fff1f0;
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.profile-logout-btn:hover {
+    background: #fee2e2;
+}

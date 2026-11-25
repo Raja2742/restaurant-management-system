@@ -1,0 +1,276 @@
+.cashier-modal-backdrop {
+position: fixed;
+inset: 0;
+z-index: 1000;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 20px;
+overflow-y: auto;
+background: rgba(19, 25, 42, 0.58);
+backdrop-filter: blur(4px);
+animation: cashierBackdropFade 0.2s ease;
+}
+
+.cashier-payment-modal {
+width: 100%;
+max-width: 560px;
+max-height: calc(100vh - 40px);
+overflow-y: auto;
+background: #ffffff;
+border: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 18px;
+box-shadow: 0 24px 70px rgba(10, 15, 35, 0.25);
+animation: cashierModalAppear 0.25s ease;
+}
+
+.cashier-modal-header {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+gap: 18px;
+padding: 26px 28px 22px;
+border-bottom: 1px solid #eef0f5;
+}
+
+.cashier-modal-eyebrow {
+color: #6473e8;
+font-size: 10px;
+font-weight: 800;
+letter-spacing: 1.2px;
+}
+
+.cashier-modal-header h2 {
+margin: 8px 0;
+color: #202638;
+font-size: 24px;
+font-weight: 750;
+}
+
+.cashier-modal-header p {
+margin: 0;
+color: #858c9c;
+font-size: 13px;
+line-height: 1.5;
+}
+
+.cashier-modal-close {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 36px;
+height: 36px;
+flex-shrink: 0;
+color: #72798a;
+background: #f2f4f8;
+border: none;
+border-radius: 10px;
+font-size: 25px;
+line-height: 1;
+cursor: pointer;
+transition:
+color 0.2s ease,
+background 0.2s ease;
+}
+
+.cashier-modal-close:hover {
+color: #202638;
+background: #e7eaf2;
+}
+
+.cashier-modal-amount {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 26px 20px;
+background: linear-gradient(180deg, #f7f8ff 0%, #ffffff 100%);
+border-bottom: 1px solid #eef0f5;
+}
+
+.cashier-modal-amount > span:first-child {
+color: #858c9c;
+font-size: 12px;
+}
+
+.cashier-modal-amount h3 {
+margin: 10px 0 14px;
+color: #202638;
+font-size: 36px;
+font-weight: 800;
+overflow-wrap: anywhere;
+}
+
+.cashier-modal-status {
+padding: 7px 13px;
+color: #687083;
+background: #edf0f5;
+border-radius: 20px;
+font-size: 11px;
+font-weight: 700;
+}
+
+.cashier-modal-status.status-pending,
+.cashier-modal-status.status-initiated,
+.cashier-modal-status.status-processing {
+color: #a66b0b;
+background: #fff4dc;
+}
+
+.cashier-modal-status.status-completed,
+.cashier-modal-status.status-paid,
+.cashier-modal-status.status-success,
+.cashier-modal-status.status-successful {
+color: #16865e;
+background: #e5f8ef;
+}
+
+.cashier-modal-status.status-failed,
+.cashier-modal-status.status-cancelled,
+.cashier-modal-status.status-rejected {
+color: #cf4545;
+background: #ffebeb;
+}
+
+.cashier-modal-details {
+padding: 8px 28px;
+}
+
+.cashier-modal-detail {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+gap: 20px;
+padding: 15px 0;
+border-bottom: 1px solid #f0f1f5;
+}
+
+.cashier-modal-detail:last-child {
+border-bottom: none;
+}
+
+.cashier-modal-detail > span {
+flex: 0 0 40%;
+color: #858c9c;
+font-size: 12px;
+}
+
+.cashier-modal-detail strong {
+color: #343b4d;
+font-size: 12px;
+font-weight: 650;
+text-align: right;
+overflow-wrap: anywhere;
+}
+
+.cashier-modal-footer {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+padding: 20px 28px 26px;
+background: #fafbfe;
+border-top: 1px solid #eef0f5;
+}
+
+.cashier-modal-footer p {
+max-width: 300px;
+margin: 0;
+color: #858c9c;
+font-size: 11px;
+line-height: 1.6;
+}
+
+.cashier-modal-done-btn {
+min-height: 42px;
+padding: 11px 18px;
+color: #ffffff;
+background: #5968e8;
+border: none;
+border-radius: 9px;
+font-size: 12px;
+font-weight: 650;
+cursor: pointer;
+transition: background 0.2s ease;
+}
+
+.cashier-modal-done-btn:hover {
+background: #4655d0;
+}
+
+@keyframes cashierBackdropFade {
+from {
+opacity: 0;
+}
+
+to {
+opacity: 1;
+}
+}
+
+@keyframes cashierModalAppear {
+from {
+opacity: 0;
+transform: translateY(12px) scale(0.98);
+}
+
+to {
+opacity: 1;
+transform: translateY(0) scale(1);
+}
+}
+
+@media (max-width: 560px) {
+.cashier-modal-backdrop {
+padding: 12px;
+}
+
+.cashier-payment-modal {
+max-height: calc(100vh - 24px);
+border-radius: 14px;
+}
+
+.cashier-modal-header {
+padding: 22px 20px 18px;
+}
+
+.cashier-modal-header h2 {
+font-size: 21px;
+}
+
+.cashier-modal-amount h3 {
+font-size: 30px;
+}
+
+.cashier-modal-details {
+padding: 8px 20px;
+}
+
+.cashier-modal-detail {
+gap: 12px;
+}
+
+.cashier-modal-detail > span {
+flex-basis: 42%;
+}
+
+.cashier-modal-footer {
+align-items: stretch;
+flex-direction: column;
+padding: 18px 20px 22px;
+}
+
+.cashier-modal-footer p {
+max-width: none;
+}
+
+.cashier-modal-done-btn {
+width: 100%;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+.cashier-modal-backdrop,
+.cashier-payment-modal {
+animation: none;
+}
+}

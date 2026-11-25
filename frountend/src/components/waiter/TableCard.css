@@ -1,0 +1,44 @@
+.table-card__release-button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 11px 14px;
+    border: 1px solid #dc2626;
+    border-radius: 8px;
+    background: #fff;
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.table-card__release-button:hover:not(:disabled) {
+    background: #dc2626;
+    color: #fff;
+}
+
+.table-card__release-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.table-card__bill-button {
+    width: 100%;
+    padding: 10px 14px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 8px;
+    background: #16a34a;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.table-card__bill-button:hover:not(:disabled) {
+    background: #15803d;
+}
+
+.table-card__bill-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}

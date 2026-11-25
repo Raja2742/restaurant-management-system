@@ -1,0 +1,159 @@
+.admin-quick-actions {
+padding: 25px;
+border: 1px solid #e9edf4;
+border-radius: 18px;
+background: #ffffff;
+box-shadow: 0 5px 20px rgb(31 42 68 / 3%);
+}
+
+.admin-quick-actions-heading {
+margin-bottom: 22px;
+}
+
+.admin-section-eyebrow {
+color: #7777d9;
+font-size: 10px;
+font-weight: 800;
+letter-spacing: 1.5px;
+}
+
+.admin-quick-actions-heading h2 {
+margin: 7px 0 5px;
+color: #192334;
+font-size: 21px;
+font-weight: 800;
+}
+
+.admin-quick-actions-heading p {
+margin: 0;
+color: #8993a5;
+font-size: 12px;
+line-height: 1.6;
+}
+
+.admin-quick-actions-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 15px;
+}
+
+.admin-action-card {
+display: flex;
+align-items: center;
+gap: 15px;
+min-width: 0;
+padding: 18px;
+border: 1px solid #edf0f6;
+border-radius: 14px;
+background: #ffffff;
+text-align: left;
+cursor: pointer;
+transition:
+transform 0.2s ease,
+border-color 0.2s ease,
+box-shadow 0.2s ease;
+}
+
+.admin-action-card:hover {
+transform: translateY(-2px);
+border-color: #dcdcff;
+box-shadow: 0 7px 20px rgb(31 42 68 / 6%);
+}
+
+.admin-action-icon {
+display: grid;
+width: 48px;
+height: 48px;
+flex-shrink: 0;
+place-items: center;
+border-radius: 13px;
+}
+
+.admin-action-purple {
+background: #eeeeff;
+color: #5959d5;
+}
+
+.admin-action-blue {
+background: #e9f4ff;
+color: #3184d6;
+}
+
+.admin-action-orange {
+background: #fff1e5;
+color: #e58b36;
+}
+
+.admin-action-green {
+background: #e6f8ee;
+color: #21985a;
+}
+
+.admin-action-content {
+flex: 1;
+min-width: 0;
+}
+
+.admin-action-content h3 {
+margin: 0;
+color: #263146;
+font-size: 13px;
+font-weight: 750;
+}
+
+.admin-action-content p {
+margin: 6px 0 0;
+color: #929bad;
+font-size: 11px;
+line-height: 1.5;
+}
+
+.admin-action-arrow {
+display: grid;
+width: 30px;
+height: 30px;
+flex-shrink: 0;
+place-items: center;
+border-radius: 9px;
+background: #f6f7fb;
+color: #8993a5;
+transition:
+background 0.2s ease,
+color 0.2s ease;
+}
+
+.admin-action-card:hover .admin-action-arrow {
+background: #eeeeff;
+color: #5959d5;
+}
+
+@media (max-width: 700px) {
+.admin-quick-actions {
+padding: 18px;
+}
+
+.admin-quick-actions-grid {
+grid-template-columns: 1fr;
+gap: 11px;
+}
+
+.admin-action-card {
+padding: 15px;
+}
+}
+
+@media (max-width: 400px) {
+.admin-action-icon {
+width: 42px;
+height: 42px;
+}
+
+.admin-action-content h3 {
+font-size: 12px;
+}
+
+.admin-action-arrow {
+width: 26px;
+height: 26px;
+}
+}

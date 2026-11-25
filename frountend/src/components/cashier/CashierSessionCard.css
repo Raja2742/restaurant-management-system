@@ -1,0 +1,203 @@
+.cashier-session-card {
+min-width: 0;
+padding: 22px;
+background: #ffffff;
+border: 1px solid #e7eaf1;
+border-radius: 16px;
+box-shadow: 0 4px 14px rgba(20, 30, 55, 0.04);
+transition:
+transform 0.2s ease,
+box-shadow 0.2s ease;
+}
+
+.cashier-session-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 24px rgba(20, 30, 55, 0.08);
+}
+
+.cashier-session-header {
+display: flex;
+align-items: center;
+gap: 13px;
+padding-bottom: 20px;
+border-bottom: 1px solid #eef0f5;
+}
+
+.cashier-session-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 46px;
+height: 46px;
+flex-shrink: 0;
+background: #eef0ff;
+border-radius: 12px;
+font-size: 22px;
+}
+
+.cashier-session-title {
+flex: 1;
+min-width: 0;
+}
+
+.cashier-session-title > span {
+color: #858c9c;
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 1px;
+}
+
+.cashier-session-title h3 {
+margin: 5px 0 0;
+color: #202638;
+font-size: 19px;
+font-weight: 750;
+}
+
+.cashier-session-status {
+padding: 7px 10px;
+color: #687083;
+background: #edf0f5;
+border-radius: 20px;
+font-size: 10px;
+font-weight: 700;
+text-align: center;
+}
+
+.cashier-session-status.session-open,
+.cashier-session-status.session-active {
+color: #16865e;
+background: #e5f8ef;
+}
+
+.cashier-session-status.session-closed,
+.cashier-session-status.session-completed {
+color: #5968e8;
+background: #eef0ff;
+}
+
+.cashier-session-details {
+display: flex;
+flex-direction: column;
+gap: 17px;
+padding: 20px 0;
+}
+
+.cashier-session-detail {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+gap: 14px;
+}
+
+.cashier-session-detail > span {
+color: #858c9c;
+font-size: 12px;
+}
+
+.cashier-session-detail > strong {
+color: #343b4d;
+font-size: 12px;
+font-weight: 650;
+text-align: right;
+overflow-wrap: anywhere;
+}
+
+.cashier-session-detail > .cashier-session-amount {
+color: #202638;
+font-size: 17px;
+font-weight: 750;
+}
+
+.cashier-session-detail > .cashier-session-payment-paid {
+color: #16865e;
+}
+
+.cashier-session-detail > .cashier-session-payment-pending {
+color: #b77916;
+}
+
+.cashier-session-footer {
+padding-top: 17px;
+border-top: 1px solid #eef0f5;
+}
+
+.cashier-session-close-btn {
+width: 100%;
+min-height: 43px;
+padding: 12px 15px;
+color: #ffffff;
+background: #5968e8;
+border: none;
+border-radius: 9px;
+font-size: 12px;
+font-weight: 650;
+cursor: pointer;
+transition:
+background 0.2s ease,
+transform 0.2s ease;
+}
+
+.cashier-session-close-btn:hover:not(:disabled) {
+background: #4655d0;
+transform: translateY(-1px);
+}
+
+.cashier-session-close-btn:disabled {
+opacity: 0.6;
+cursor: not-allowed;
+}
+
+.cashier-session-warning {
+margin: 0;
+padding: 12px;
+color: #a66b0b;
+background: #fff5e3;
+border: 1px solid #ffebc5;
+border-radius: 9px;
+font-size: 12px;
+line-height: 1.6;
+}
+
+.cashier-session-closed-message {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+padding: 12px;
+color: #16865e;
+background: #e5f8ef;
+border-radius: 9px;
+font-size: 12px;
+font-weight: 700;
+}
+
+.cashier-session-closed-message span {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 20px;
+height: 20px;
+color: #ffffff;
+background: #19966b;
+border-radius: 50%;
+font-size: 12px;
+}
+
+@media (max-width: 480px) {
+.cashier-session-card {
+padding: 17px;
+}
+
+.cashier-session-header {
+flex-wrap: wrap;
+}
+
+.cashier-session-status {
+margin-left: auto;
+}
+
+.cashier-session-detail {
+gap: 10px;
+}
+}

@@ -1,0 +1,246 @@
+/* Main Hero Section */
+
+.customer-hero {
+    width: 100%;
+    min-height: 470px;
+    padding: 65px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    overflow: hidden;
+    background: linear-gradient(120deg, #fff8f2, #fff0e5);
+}
+
+/* Hero Content */
+
+.hero-content {
+    flex: 1;
+    max-width: 580px;
+}
+
+/* Welcome Label */
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 22px;
+    color: #d9632c;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.hero-label-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e76f35;
+}
+
+/* Heading */
+
+.hero-content h1 {
+    margin: 0;
+    color: #242424;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.hero-content h1 span {
+    color: #e76f35;
+}
+
+/* Description */
+
+.hero-content > p {
+    max-width: 490px;
+    margin: 20px 0 25px;
+    color: #777777;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Explore Button */
+
+.hero-button {
+    width: fit-content;
+    min-height: 48px;
+    padding: 0 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #e76f35;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.hero-button:hover {
+    background: #cf5b27;
+    transform: translateY(-2px);
+}
+
+/* Highlights */
+
+.hero-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.hero-highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #555555;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hero-highlight-item svg {
+    color: #e76f35;
+    flex-shrink: 0;
+}
+
+/* Hero Decoration */
+
+.hero-decoration {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px;
+}
+
+.hero-image-circle {
+    width: min(350px, 30vw);
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 12px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 35% 30%, #ffe0c7, #f6a56f 65%, #e76f35);
+    box-shadow: 0 20px 50px rgba(180, 91, 44, 0.15);
+    color: #ffffff;
+    text-align: center;
+    transform: rotate(-7deg);
+}
+
+.hero-image-circle span {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.hero-image-circle strong {
+    margin-top: 8px;
+    font-size: 29px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .customer-hero {
+        padding: 55px 5%;
+        gap: 20px;
+    }
+
+    .hero-highlights {
+        gap: 16px;
+    }
+
+    .hero-image-circle {
+        width: 260px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+    .customer-hero {
+        min-height: auto;
+        padding: 45px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content > p {
+        font-size: 14px;
+    }
+
+    .hero-highlights {
+        gap: 15px;
+    }
+
+    .hero-highlight-item {
+        font-size: 11px;
+    }
+
+    .hero-decoration {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero-image-circle {
+        width: 230px;
+    }
+
+    .hero-image-circle strong {
+        font-size: 25px;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 380px) {
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-highlights {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-image-circle {
+        width: 190px;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-button {
+        transition: none;
+    }
+
+    .hero-button:hover {
+        transform: none;
+    }
+}

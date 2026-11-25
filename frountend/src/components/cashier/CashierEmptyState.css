@@ -1,0 +1,76 @@
+.cashier-empty-state {
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+min-height: 280px;
+padding: 40px 24px;
+background: #ffffff;
+border: 1px dashed #dfe3ed;
+border-radius: 16px;
+text-align: center;
+}
+
+.cashier-empty-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 76px;
+height: 76px;
+margin-bottom: 22px;
+background: #f0f2ff;
+border-radius: 50%;
+font-size: 34px;
+}
+
+.cashier-empty-state h3 {
+margin: 0 0 10px;
+color: #202638;
+font-size: 20px;
+font-weight: 700;
+}
+
+.cashier-empty-state p {
+max-width: 380px;
+margin: 0;
+color: #858c9c;
+font-size: 13px;
+line-height: 1.7;
+}
+
+.cashier-empty-reset-btn {
+margin-top: 22px;
+padding: 11px 20px;
+color: #ffffff;
+background: #5968e8;
+border: none;
+border-radius: 9px;
+font-size: 12px;
+font-weight: 600;
+cursor: pointer;
+transition:
+background 0.2s ease,
+transform 0.2s ease;
+}
+
+.cashier-empty-reset-btn:hover {
+background: #4655d0;
+transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+.cashier-empty-state {
+min-height: 240px;
+padding: 30px 18px;
+}
+
+.cashier-empty-icon {
+width: 64px;
+height: 64px;
+font-size: 29px;
+}
+
+.cashier-empty-state h3 {
+font-size: 18px;
+}
+}

@@ -1,0 +1,611 @@
+.cashier-dashboard {
+min-height: 100vh;
+background: #f5f7fb;
+color: #172033;
+}
+
+.cashier-main {
+width: min(1400px, 94%);
+margin: 0 auto;
+padding: 32px 0 48px;
+}
+
+.cashier-heading {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 24px;
+margin-bottom: 28px;
+}
+
+.cashier-eyebrow {
+color: #5968d8;
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 1.6px;
+}
+
+.cashier-heading h1 {
+margin: 8px 0;
+font-size: clamp(26px, 3vw, 36px);
+font-weight: 800;
+}
+
+.cashier-heading p,
+.cashier-section-heading p {
+margin: 0;
+color: #778198;
+line-height: 1.6;
+}
+
+.cashier-status-indicator {
+display: inline-flex;
+align-items: center;
+gap: 9px;
+padding: 10px 15px;
+border: 1px solid #d8f1e3;
+border-radius: 30px;
+background: #edfaf2;
+color: #16824b;
+font-size: 13px;
+font-weight: 700;
+white-space: nowrap;
+}
+
+.cashier-status-indicator span {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: #20b568;
+}
+
+.cashier-lookup-section,
+.cashier-payments-section {
+margin-top: 28px;
+padding: 24px;
+border: 1px solid #e8ebf3;
+border-radius: 18px;
+background: #fff;
+box-shadow: 0 5px 22px rgb(31 42 68 / 4%);
+}
+
+.cashier-section-heading {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 16px;
+margin-bottom: 20px;
+}
+
+.cashier-section-heading h2 {
+margin: 0 0 6px;
+font-size: 20px;
+font-weight: 800;
+}
+
+.cashier-search-form {
+display: grid;
+grid-template-columns: 180px minmax(180px, 1fr) auto auto;
+align-items: end;
+gap: 14px;
+}
+
+.cashier-search-type,
+.cashier-search-input {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.cashier-search-type label,
+.cashier-search-input label {
+color: #47516a;
+font-size: 13px;
+font-weight: 700;
+}
+
+.cashier-search-type select,
+.cashier-search-input input {
+width: 100%;
+min-height: 46px;
+padding: 0 13px;
+border: 1px solid #dfe4ef;
+border-radius: 10px;
+outline: none;
+background: #fff;
+color: #172033;
+font: inherit;
+}
+
+.cashier-search-type select:focus,
+.cashier-search-input input:focus {
+border-color: #6573e7;
+box-shadow: 0 0 0 3px rgb(101 115 231 / 12%);
+}
+
+.cashier-search-form button {
+min-height: 46px;
+padding: 0 20px;
+border: 0;
+border-radius: 10px;
+background: #5968d8;
+color: #fff;
+font: inherit;
+font-size: 14px;
+font-weight: 700;
+cursor: pointer;
+transition: background 0.2s ease;
+}
+
+.cashier-search-form button:hover {
+background: #4554c2;
+}
+
+.cashier-search-form button:disabled {
+opacity: 0.6;
+cursor: not-allowed;
+}
+
+.cashier-search-form .cashier-reset-button {
+border: 1px solid #dfe4ef;
+background: #fff;
+color: #47516a;
+}
+
+.cashier-search-form .cashier-reset-button:hover {
+background: #f3f5fa;
+}
+
+.cashier-alert {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 14px;
+margin-top: 20px;
+padding: 14px 16px;
+border: 1px solid transparent;
+border-radius: 12px;
+font-size: 14px;
+line-height: 1.5;
+}
+
+.cashier-alert button {
+flex-shrink: 0;
+border: 0;
+background: transparent;
+font-size: 23px;
+cursor: pointer;
+}
+
+.cashier-alert-error {
+border-color: #ffd7d7;
+background: #fff1f1;
+color: #b42332;
+}
+
+.cashier-alert-success {
+border-color: #c9efd9;
+background: #edfaf2;
+color: #187746;
+}
+
+.cashier-payment-list {
+display: grid;
+gap: 18px;
+}
+
+.cashier-payment-item {
+display: grid;
+gap: 12px;
+}
+
+.cashier-summary-row {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 18px;
+margin-top: 28px;
+}
+
+.cashier-summary-card {
+display: flex;
+flex-direction: column;
+gap: 12px;
+padding: 22px;
+border: 1px solid #e8ebf3;
+border-radius: 16px;
+background: #fff;
+box-shadow: 0 5px 22px rgb(31 42 68 / 4%);
+}
+
+.cashier-summary-card span {
+color: #778198;
+font-size: 13px;
+font-weight: 600;
+}
+
+.cashier-summary-card strong {
+color: #172033;
+font-size: 25px;
+font-weight: 800;
+overflow-wrap: anywhere;
+}
+
+@media (max-width: 1000px) {
+.cashier-search-form {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cashier-summary-row {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+
+@media (max-width: 600px) {
+.cashier-main {
+width: 92%;
+padding-top: 24px;
+}
+
+.cashier-heading {
+align-items: flex-start;
+flex-direction: column;
+}
+
+.cashier-lookup-section,
+.cashier-payments-section {
+padding: 17px;
+}
+
+.cashier-search-form {
+grid-template-columns: 1fr;
+}
+
+.cashier-summary-row {
+grid-template-columns: 1fr;
+}
+
+.cashier-summary-card {
+padding: 18px;
+}
+}
+/* =====================================
+   PENDING BILLS SECTION
+===================================== */
+
+.cashier-pending-bills-section {
+    width: 100%;
+    margin-top: 28px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Section Heading */
+
+.cashier-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.cashier-section-heading h2 {
+    margin: 0;
+    color: #111827;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.cashier-section-heading p {
+    margin: 6px 0 0;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+/* Refresh Button */
+
+.cashier-refresh-button {
+    padding: 9px 17px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cashier-refresh-button:hover:not(:disabled) {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+}
+
+.cashier-refresh-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Pending Bills List */
+
+.cashier-pending-bills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+/* Individual Bill Card */
+
+.cashier-pending-bill-card {
+    padding: 20px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cashier-pending-bill-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.07);
+}
+
+/* Bill Details */
+
+.cashier-pending-bill-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cashier-pending-bill-details > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.cashier-pending-bill-label {
+    color: #6b7280;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+}
+
+.cashier-pending-bill-details strong {
+    color: #111827;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Bill Status */
+
+.cashier-pending-bill-status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #fef3c7;
+    color: #92400e;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* Loading and Empty State */
+
+.cashier-pending-bills-empty {
+    padding: 35px 20px;
+    text-align: center;
+    color: #6b7280;
+    background: #f9fafb;
+    border: 1px dashed #d1d5db;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.cashier-pending-bills-empty h3 {
+    margin: 0 0 8px;
+    color: #374151;
+    font-size: 16px;
+}
+
+.cashier-pending-bills-empty p {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* Error Alert */
+
+.cashier-alert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.cashier-alert-error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+}
+
+.cashier-alert-error button {
+    padding: 6px 12px;
+    border: 1px solid #fca5a5;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #b91c1c;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cashier-alert-error button:hover:not(:disabled) {
+    background: #fee2e2;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+    .cashier-pending-bills-section {
+        padding: 16px;
+    }
+
+    .cashier-section-heading {
+        align-items: flex-start;
+    }
+
+    .cashier-section-heading h2 {
+        font-size: 18px;
+    }
+
+    .cashier-pending-bills-list {
+        grid-template-columns: 1fr;
+    }
+
+    .cashier-pending-bill-card {
+        padding: 16px;
+    }
+}
+/* Pending Bill Payment Actions */
+
+.cashier-pending-bill-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cashier-process-cash-button,
+.cashier-process-upi-button {
+    flex: 1;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cashier-process-cash-button {
+    background: #15803d;
+}
+
+.cashier-process-cash-button:hover:not(:disabled) {
+    background: #166534;
+}
+
+.cashier-process-upi-button {
+    background: #2563eb;
+}
+
+.cashier-process-upi-button:hover:not(:disabled) {
+    background: #1d4ed8;
+}
+
+.cashier-process-cash-button:disabled,
+.cashier-process-upi-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media (max-width: 450px) {
+    .cashier-pending-bill-actions {
+        flex-direction: column;
+    }
+}
+
+/* Order Details */
+
+.cashier-orders-section {
+    margin-top: 28px;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+}
+
+.cashier-orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.cashier-order-card {
+    padding: 20px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.cashier-order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.cashier-order-header h3 {
+    margin: 0 0 6px;
+    color: #111827;
+    font-size: 16px;
+}
+
+.cashier-order-header span {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.cashier-order-header > strong {
+    color: #15803d;
+    font-size: 17px;
+}
+
+.cashier-order-items {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.cashier-order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.cashier-order-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cashier-order-item div strong {
+    color: #374151;
+    font-size: 14px;
+}
+
+.cashier-order-item span {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.cashier-order-item > strong {
+    color: #111827;
+    font-size: 14px;
+}
+
+.cashier-orders-empty {
+    padding: 30px;
+    text-align: center;
+    color: #6b7280;
+    background: #f9fafb;
+    border: 1px dashed #d1d5db;
+    border-radius: 10px;
+}

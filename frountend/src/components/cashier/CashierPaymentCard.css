@@ -1,0 +1,224 @@
+.cashier-payment-card {
+min-width: 0;
+padding: 22px;
+background: #ffffff;
+border: 1px solid #e7eaf1;
+border-radius: 16px;
+box-shadow: 0 4px 14px rgba(20, 30, 55, 0.04);
+transition:
+transform 0.2s ease,
+box-shadow 0.2s ease;
+}
+
+.cashier-payment-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 24px rgba(20, 30, 55, 0.08);
+}
+
+.cashier-payment-card-header {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+gap: 12px;
+padding-bottom: 18px;
+border-bottom: 1px solid #eef0f5;
+}
+
+.cashier-payment-id-section h3 {
+margin: 7px 0 0;
+color: #202638;
+font-size: 18px;
+font-weight: 700;
+}
+
+.cashier-payment-label {
+display: block;
+color: #858c9c;
+font-size: 12px;
+font-weight: 500;
+}
+
+.cashier-payment-status {
+display: inline-flex;
+align-items: center;
+gap: 7px;
+max-width: 55%;
+padding: 7px 10px;
+border-radius: 20px;
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 0.3px;
+overflow-wrap: anywhere;
+}
+
+.cashier-status-dot {
+width: 7px;
+height: 7px;
+flex-shrink: 0;
+background: currentColor;
+border-radius: 50%;
+}
+
+.cashier-payment-status.status-pending,
+.cashier-payment-status.status-initiated,
+.cashier-payment-status.status-processing {
+color: #a66b0b;
+background: #fff4dc;
+}
+
+.cashier-payment-status.status-completed,
+.cashier-payment-status.status-paid,
+.cashier-payment-status.status-success,
+.cashier-payment-status.status-successful {
+color: #16865e;
+background: #e5f8ef;
+}
+
+.cashier-payment-status.status-failed,
+.cashier-payment-status.status-cancelled,
+.cashier-payment-status.status-rejected {
+color: #cf4545;
+background: #ffebeb;
+}
+
+.cashier-payment-status.status-unknown {
+color: #687083;
+background: #edf0f5;
+}
+
+.cashier-payment-amount-section {
+padding: 20px 0;
+}
+
+.cashier-payment-amount-section h2 {
+margin: 8px 0 0;
+color: #202638;
+font-size: 30px;
+font-weight: 750;
+line-height: 1.2;
+overflow-wrap: anywhere;
+}
+
+.cashier-payment-details {
+display: flex;
+flex-direction: column;
+gap: 15px;
+padding: 18px 0;
+border-top: 1px solid #eef0f5;
+}
+
+.cashier-payment-detail-row {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+gap: 14px;
+}
+
+.cashier-payment-detail-label {
+color: #858c9c;
+font-size: 12px;
+}
+
+.cashier-payment-detail-value {
+color: #343b4d;
+font-size: 12px;
+font-weight: 600;
+text-align: right;
+overflow-wrap: anywhere;
+}
+
+.cashier-payment-method {
+display: inline-flex;
+align-items: center;
+justify-content: flex-end;
+gap: 7px;
+color: #343b4d;
+font-size: 12px;
+font-weight: 600;
+}
+
+.cashier-transaction-id {
+max-width: 60%;
+}
+
+.cashier-payment-card-actions {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+padding-top: 16px;
+border-top: 1px solid #eef0f5;
+}
+
+.cashier-payment-card-actions button {
+flex: 1 1 120px;
+min-height: 40px;
+padding: 10px 12px;
+border: 1px solid transparent;
+border-radius: 9px;
+font-size: 12px;
+font-weight: 600;
+cursor: pointer;
+transition:
+background 0.2s ease,
+transform 0.2s ease;
+}
+
+.cashier-payment-card-actions button:hover {
+transform: translateY(-1px);
+}
+
+.cashier-payment-view-btn {
+color: #5866dc;
+background: #f0f1ff;
+border-color: #e2e4ff !important;
+}
+
+.cashier-payment-view-btn:hover {
+background: #e3e5ff;
+}
+
+.cashier-payment-complete-btn {
+color: #ffffff;
+background: #5968e8;
+}
+
+.cashier-payment-complete-btn:hover {
+background: #4655d0;
+}
+
+.cashier-payment-close-session-btn {
+color: #16865e;
+background: #e5f8ef;
+border-color: #c9efdc !important;
+}
+
+.cashier-payment-close-session-btn:hover {
+background: #d3f3e2;
+}
+
+@media (max-width: 480px) {
+.cashier-payment-card {
+padding: 17px;
+}
+
+.cashier-payment-card-header {
+flex-direction: column;
+align-items: flex-start;
+}
+
+.cashier-payment-status {
+max-width: 100%;
+}
+
+.cashier-payment-amount-section h2 {
+font-size: 26px;
+}
+
+.cashier-payment-card-actions {
+flex-direction: column;
+}
+
+.cashier-payment-card-actions button {
+width: 100%;
+}
+}

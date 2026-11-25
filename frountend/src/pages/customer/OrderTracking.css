@@ -1,0 +1,234 @@
+.tracking-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: #f8f8f8;
+}
+
+.tracking-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.tracking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.tracking-header h1 {
+    font-size: 27px;
+    color: #222;
+    margin-bottom: 7px;
+}
+
+.tracking-header p {
+    color: #888;
+    font-size: 14px;
+}
+
+.tracking-header button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 7px;
+    background: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.tracking-card {
+    background: #fff;
+    padding: 28px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+.tracking-card h2 {
+    font-size: 19px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+/* Timeline */
+
+.tracking-timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    min-height: 85px;
+    position: relative;
+}
+
+.timeline-step:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 16px;
+    width: 2px;
+    height: 50px;
+    background: #ddd;
+}
+
+.timeline-step.completed:not(:last-child)::before {
+    background: #16a34a;
+}
+
+.timeline-indicator {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #eee;
+    color: #777;
+    font-weight: 700;
+    font-size: 13px;
+    z-index: 1;
+}
+
+.timeline-step.completed .timeline-indicator {
+    background: #16a34a;
+    color: white;
+}
+
+.timeline-step.current .timeline-indicator {
+    outline: 4px solid #dcfce7;
+}
+
+.timeline-content h3 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.timeline-content p {
+    color: #888;
+    font-size: 13px;
+}
+
+/* Order Summary */
+
+.tracking-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.tracking-item h4 {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.tracking-item span {
+    font-size: 12px;
+    color: #888;
+}
+
+.tracking-item strong {
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.tracking-total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    font-size: 16px;
+}
+
+.tracking-total strong {
+    color: #e87524;
+    font-size: 20px;
+}
+
+/* Cancelled */
+
+.cancelled-card {
+    padding: 45px 20px;
+    text-align: center;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.cancelled-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fee2e2;
+    color: #dc2626;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.cancelled-card h2 {
+    color: #dc2626;
+    margin-bottom: 10px;
+}
+
+.cancelled-card p {
+    color: #777;
+}
+
+/* Loading and Error */
+
+.tracking-message {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.tracking-message button {
+    padding: 12px 22px;
+    background: #e87524;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.tracking-refresh-note {
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .tracking-page {
+        padding: 25px 12px;
+    }
+
+    .tracking-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .tracking-card {
+        padding: 22px 17px;
+    }
+}

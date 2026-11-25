@@ -1,0 +1,133 @@
+.admin-toast {
+position: fixed;
+top: 24px;
+right: 24px;
+z-index: 2000;
+display: flex;
+align-items: flex-start;
+gap: 13px;
+width: min(400px, calc(100vw - 32px));
+padding: 17px;
+box-sizing: border-box;
+border: 1px solid #e5e7eb;
+border-radius: 13px;
+background: #ffffff;
+box-shadow: 0 12px 35px rgba(15, 23, 42, 0.12);
+animation: admin-toast-enter 0.25s ease;
+}
+
+.admin-toast-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+width: 38px;
+height: 38px;
+border-radius: 10px;
+}
+
+.admin-toast-content {
+flex: 1;
+min-width: 0;
+}
+
+.admin-toast-content strong {
+display: block;
+margin: 1px 0 5px;
+color: #253047;
+font-size: 14px;
+font-weight: 700;
+}
+
+.admin-toast-content p {
+margin: 0;
+overflow-wrap: anywhere;
+color: #737e91;
+font-size: 13px;
+line-height: 1.6;
+}
+
+.admin-toast-close {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+width: 28px;
+height: 28px;
+padding: 0;
+border: none;
+border-radius: 7px;
+background: transparent;
+color: #9aa3b2;
+cursor: pointer;
+}
+
+.admin-toast-close:hover {
+background: #f3f4f6;
+color: #374151;
+}
+
+/* Success */
+
+.admin-toast-success {
+border-left: 4px solid #16a34a;
+}
+
+.admin-toast-success .admin-toast-icon {
+background: #dcfce7;
+color: #15803d;
+}
+
+/* Error */
+
+.admin-toast-error {
+border-left: 4px solid #dc2626;
+}
+
+.admin-toast-error .admin-toast-icon {
+background: #fee2e2;
+color: #b91c1c;
+}
+
+/* Warning */
+
+.admin-toast-warning {
+border-left: 4px solid #d97706;
+}
+
+.admin-toast-warning .admin-toast-icon {
+background: #fef3c7;
+color: #b45309;
+}
+
+/* Information */
+
+.admin-toast-info {
+border-left: 4px solid #2563eb;
+}
+
+.admin-toast-info .admin-toast-icon {
+background: #dbeafe;
+color: #1d4ed8;
+}
+
+@keyframes admin-toast-enter {
+from {
+opacity: 0;
+transform: translateX(20px);
+}
+
+to {
+opacity: 1;
+transform: translateX(0);
+}
+}
+
+@media (max-width: 480px) {
+.admin-toast {
+top: 12px;
+right: 12px;
+width: calc(100vw - 24px);
+padding: 14px;
+}
+}

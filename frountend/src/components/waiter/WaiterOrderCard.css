@@ -1,0 +1,209 @@
+.waiter-order-card {
+display: flex;
+flex-direction: column;
+gap: 18px;
+min-width: 0;
+padding: 22px;
+border: 1px solid #e5e7eb;
+border-radius: 14px;
+background: #ffffff;
+box-shadow: 0 2px 6px rgb(0 0 0 / 4%);
+transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.waiter-order-card:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 20px rgb(0 0 0 / 7%);
+}
+
+.waiter-order-card__header {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+gap: 12px;
+}
+
+.waiter-order-card__label {
+margin: 0 0 5px;
+color: #6b7280;
+font-size: 12px;
+}
+
+.waiter-order-card__number {
+margin: 0;
+color: #111827;
+font-size: 20px;
+font-weight: 700;
+}
+
+.waiter-order-card__status {
+display: inline-flex;
+align-items: center;
+padding: 6px 10px;
+border-radius: 20px;
+font-size: 11px;
+font-weight: 700;
+text-transform: capitalize;
+white-space: nowrap;
+}
+
+.waiter-order-card__status--pending {
+background: #fef3c7;
+color: #92400e;
+}
+
+.waiter-order-card__status--accepted {
+background: #dbeafe;
+color: #1d4ed8;
+}
+
+.waiter-order-card__status--preparing {
+background: #ffedd5;
+color: #9a3412;
+}
+
+.waiter-order-card__status--ready {
+background: #dcfce7;
+color: #166534;
+}
+
+.waiter-order-card__status--served {
+background: #f3f4f6;
+color: #374151;
+}
+
+.waiter-order-card__status--unknown {
+background: #f3f4f6;
+color: #4b5563;
+}
+
+.waiter-order-card__info {
+display: flex;
+flex-wrap: wrap;
+gap: 16px;
+padding-bottom: 16px;
+border-bottom: 1px solid #f3f4f6;
+}
+
+.waiter-order-card__info-item {
+display: flex;
+align-items: center;
+gap: 7px;
+color: #6b7280;
+font-size: 13px;
+}
+
+.waiter-order-card__items h4 {
+margin: 0 0 12px;
+color: #374151;
+font-size: 14px;
+font-weight: 600;
+}
+
+.waiter-order-card__items ul {
+display: flex;
+flex-direction: column;
+gap: 12px;
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+.waiter-order-card__items li {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 12px;
+color: #374151;
+font-size: 14px;
+}
+
+.waiter-order-card__item-name {
+overflow-wrap: anywhere;
+}
+
+.waiter-order-card__item-quantity {
+flex-shrink: 0;
+color: #6b7280;
+font-weight: 600;
+}
+
+.waiter-order-card__empty {
+margin: 0;
+color: #9ca3af;
+font-size: 13px;
+}
+
+.waiter-order-card__footer {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 12px;
+padding-top: 16px;
+border-top: 1px solid #f3f4f6;
+}
+
+.waiter-order-card__footer > div {
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+
+.waiter-order-card__total-label {
+color: #6b7280;
+font-size: 12px;
+}
+
+.waiter-order-card__total {
+color: #111827;
+font-size: 19px;
+font-weight: 700;
+}
+
+.waiter-order-card__button {
+padding: 10px 14px;
+border: 1px solid #d1d5db;
+border-radius: 8px;
+background: #ffffff;
+color: #374151;
+font-size: 13px;
+font-weight: 600;
+cursor: pointer;
+transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.waiter-order-card__button:hover {
+border-color: #2563eb;
+background: #eff6ff;
+color: #1d4ed8;
+}
+
+@media (max-width: 400px) {
+.waiter-order-card {
+padding: 16px;
+}
+
+.waiter-order-card__header {
+flex-direction: column;
+}
+
+.waiter-order-card__footer {
+align-items: flex-start;
+flex-direction: column;
+}
+
+.waiter-order-card__button {
+width: 100%;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+.waiter-order-card,
+.waiter-order-card__button {
+transition: none;
+}
+
+.waiter-order-card:hover {
+transform: none;
+}
+}

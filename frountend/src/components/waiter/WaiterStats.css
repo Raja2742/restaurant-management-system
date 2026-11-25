@@ -1,0 +1,79 @@
+.waiter-stats {
+display: grid;
+grid-template-columns: repeat(5, minmax(0, 1fr));
+gap: 18px;
+margin-bottom: 28px;
+}
+
+.waiter-stats__card {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 12px;
+padding: 22px 18px;
+background: #ffffff;
+border: 1px solid #e5e7eb;
+border-radius: 14px;
+box-shadow: 0 2px 6px rgb(0 0 0 / 4%);
+}
+
+.waiter-stats__title {
+margin: 0 0 10px;
+color: #6b7280;
+font-size: 13px;
+line-height: 1.4;
+}
+
+.waiter-stats__count {
+margin: 0;
+color: #111827;
+font-size: 28px;
+font-weight: 700;
+}
+
+.waiter-stats__icon {
+font-size: 26px;
+}
+
+.waiter-stats__card--occupied {
+border-left: 4px solid #f97316;
+}
+
+.waiter-stats__card--available {
+border-left: 4px solid #22c55e;
+}
+
+.waiter-stats__card--active {
+border-left: 4px solid #3b82f6;
+}
+
+.waiter-stats__card--ready {
+border-left: 4px solid #8b5cf6;
+}
+
+@media (max-width: 1200px) {
+.waiter-stats {
+grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+}
+
+@media (max-width: 700px) {
+.waiter-stats {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 12px;
+}
+
+.waiter-stats__card {
+padding: 16px;
+}
+
+.waiter-stats__count {
+font-size: 24px;
+}
+}
+
+@media (max-width: 380px) {
+.waiter-stats {
+grid-template-columns: 1fr;
+}
+}

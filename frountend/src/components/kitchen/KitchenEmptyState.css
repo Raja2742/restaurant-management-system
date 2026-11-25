@@ -1,0 +1,29 @@
+.kitchen-empty-state {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+min-height: 240px;
+padding: 32px 20px;
+border: 1px dashed #d1d5db;
+border-radius: 14px;
+background: #ffffff;
+text-align: center;
+}
+
+.kitchen-empty-state__icon {
+margin-bottom: 12px;
+font-size: 42px;
+}
+
+.kitchen-empty-state h3 {
+margin: 0 0 8px;
+color: #111827;
+font-size: 20px;
+}
+
+.kitchen-empty-state p {
+margin: 0;
+color: #6b7280;
+font-size: 14px;
+}

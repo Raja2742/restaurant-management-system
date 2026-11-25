@@ -1,0 +1,175 @@
+.cashier-navbar {
+position: relative;
+z-index: 10;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 24px;
+min-height: 82px;
+padding: 16px 32px;
+border-bottom: 1px solid #e9eaf0;
+background: #ffffff;
+box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+}
+
+.cashier-navbar-brand {
+display: flex;
+align-items: center;
+gap: 12px;
+min-width: 220px;
+}
+
+.cashier-brand-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 46px;
+height: 46px;
+flex-shrink: 0;
+border-radius: 14px;
+background: #ecfdf5;
+color: #047857;
+font-size: 25px;
+font-weight: 800;
+}
+
+.cashier-brand-text h2 {
+margin: 0 0 4px;
+color: #172033;
+font-size: 17px;
+font-weight: 800;
+letter-spacing: -0.3px;
+}
+
+.cashier-brand-text span {
+color: #7b8494;
+font-size: 12px;
+}
+
+.cashier-navbar-center {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 5px;
+}
+
+.cashier-dashboard-label {
+color: #047857;
+font-size: 11px;
+font-weight: 800;
+letter-spacing: 1.5px;
+}
+
+.cashier-navbar-subtitle {
+color: #737d8e;
+font-size: 12px;
+}
+
+.cashier-navbar-right {
+display: flex;
+align-items: center;
+justify-content: flex-end;
+gap: 24px;
+min-width: 260px;
+}
+
+.cashier-live-indicator {
+display: flex;
+align-items: center;
+gap: 8px;
+padding: 8px 11px;
+border: 1px solid #d1fae5;
+border-radius: 20px;
+background: #f0fdf4;
+color: #047857;
+font-size: 12px;
+font-weight: 600;
+white-space: nowrap;
+}
+
+.cashier-live-dot {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: #10b981;
+box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
+}
+
+.cashier-clock {
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+gap: 4px;
+}
+
+.cashier-clock-time {
+color: #172033;
+font-size: 14px;
+font-weight: 750;
+font-variant-numeric: tabular-nums;
+}
+
+.cashier-clock-date {
+color: #737d8e;
+font-size: 11px;
+}
+
+@media (max-width: 900px) {
+.cashier-navbar {
+flex-wrap: wrap;
+padding: 16px 22px;
+}
+
+.cashier-navbar-center {
+display: none;
+}
+
+.cashier-navbar-right {
+min-width: auto;
+gap: 14px;
+}
+}
+
+@media (max-width: 560px) {
+.cashier-navbar {
+gap: 14px;
+padding: 14px;
+}
+
+.cashier-navbar-brand {
+min-width: auto;
+gap: 9px;
+}
+
+.cashier-brand-icon {
+width: 40px;
+height: 40px;
+border-radius: 11px;
+font-size: 22px;
+}
+
+.cashier-brand-text h2 {
+font-size: 14px;
+}
+
+.cashier-brand-text span {
+font-size: 10px;
+}
+
+.cashier-navbar-right {
+gap: 10px;
+}
+
+.cashier-live-indicator {
+padding: 7px;
+font-size: 10px;
+}
+
+.cashier-clock-time {
+font-size: 12px;
+}
+
+.cashier-clock-date {
+font-size: 10px;
+}
+}
