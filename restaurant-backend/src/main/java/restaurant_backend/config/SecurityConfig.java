@@ -33,44 +33,45 @@ public class SecurityConfig {
 
                 .authorizeHttpRequests(auth -> auth
 
-                        .requestMatchers("/ws", "/ws/**").permitAll()
+        // Allow browser CORS preflight requests
+        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 
-                        .requestMatchers(
-                                "/api/auth/register",
-                                "/api/auth/login",
-                                "/uploads/menu/**"
-                        ).permitAll()
+        .requestMatchers("/ws", "/ws/**").permitAll()
 
-                        // Public menu browsing
-                        .requestMatchers(
-                                HttpMethod.GET,
-                                "/api/menu/items/available",
-                                "/api/menu/items/category/**"
-                        ).permitAll()
+        .requestMatchers(
+                "/api/auth/register",
+                "/api/auth/login",
+                "/uploads/menu/**"
+        ).permitAll()
 
-                        // Public table selection and QR lookup
-                        .requestMatchers(
-                                HttpMethod.GET,
-                                "/api/tables",
-                                "/api/tables/qr/**"
-                        ).permitAll()
+        // Public menu browsing
+        .requestMatchers(
+                HttpMethod.GET,
+                "/api/menu/items/available",
+                "/api/menu/items/category/**"
+        ).permitAll()
 
-                        // Public table session initialization
-                        .requestMatchers(
-                                HttpMethod.POST,
-                                "/api/sessions/table/*/start"
-                        ).permitAll()
+        // Public table selection and QR lookup
+        .requestMatchers(
+                HttpMethod.GET,
+                "/api/tables",
+                "/api/tables/qr/**"
+        ).permitAll()
 
-                        // Role-specific endpoints
-                        .requestMatchers("/api/admin/**").hasRole("ADMIN")
-                        .requestMatchers("/api/kitchen/**").hasRole("KITCHEN")
-                        .requestMatchers("/api/waiter/**").hasRole("WAITER")
-                        .requestMatchers("/api/cashier/**").hasRole("CASHIER")
+        // Public table session initialization
+        .requestMatchers(
+                HttpMethod.POST,
+                "/api/sessions/table/*/start"
+        ).permitAll()
 
-                        // Everything else requires authentication
-                        .anyRequest().authenticated()
-                )
+        // Role-specific endpoints
+        .requestMatchers("/api/admin/**").hasRole("ADMIN")
+        .requestMatchers("/api/kitchen/**").hasRole("KITCHEN")
+        .requestMatchers("/api/waiter/**").hasRole("WAITER")
+        .requestMatchers("/api/cashier/**").hasRole("CASHIER")
 
+        .anyRequest().authenticated()
+)
                 .addFilterBefore(
                         jwtAuthenticationFilter,
                         UsernamePasswordAuthenticationFilter.class
