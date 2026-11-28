@@ -1,29 +1,31 @@
 package restaurant_backend.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import java.util.List;
+import java.util.Arrays;
 
 @Configuration
 public class CorsConfig {
+
+    @Value("${app.cors.allowed-origins:http://localhost:5173}")
+    private String allowedOrigins;
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
 
         CorsConfiguration configuration = new CorsConfiguration();
 
-        // Allow our React development server.
         configuration.setAllowedOrigins(
-                List.of("http://localhost:5173")
+                Arrays.asList(allowedOrigins.split(","))
         );
 
-        // Allow the HTTP methods used by our REST APIs.
         configuration.setAllowedMethods(
-                List.of(
+                Arrays.asList(
                         "GET",
                         "POST",
                         "PUT",
@@ -33,30 +35,23 @@ public class CorsConfig {
                 )
         );
 
-        // Allow JWT authentication and JSON requests.
         configuration.setAllowedHeaders(
-                List.of(
+                Arrays.asList(
                         "Authorization",
                         "Content-Type",
                         "Accept"
                 )
         );
 
-        // We use JWT Bearer tokens, not cookie-based authentication.
         configuration.setAllowCredentials(false);
 
-        // Cache preflight results for one hour.
         configuration.setMaxAge(3600L);
 
         UrlBasedCorsConfigurationSource source =
                 new UrlBasedCorsConfigurationSource();
 
-        source.registerCorsConfiguration(
-                "/**",
-                configuration
-        );
+        source.registerCorsConfiguration("/**", configuration);
 
         return source;
     }
 }
-
