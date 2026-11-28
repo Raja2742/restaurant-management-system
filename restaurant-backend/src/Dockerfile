@@ -3,11 +3,14 @@ FROM maven:3.9-eclipse-temurin-21 AS build
 
 WORKDIR /app
 
+# Increase Maven dependency download retries
+ENV MAVEN_OPTS="-Daether.connector.http.retryHandler.count=10"
+
 COPY pom.xml .
 
 COPY src ./src
 
-RUN mvn clean package -DskipTests
+RUN mvn -B -ntp clean package -DskipTests
 
 # Stage 2: Run Spring Boot application
 FROM eclipse-temurin:21-jre
