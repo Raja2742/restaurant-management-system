@@ -23,7 +23,7 @@ public class MenuImageStorageService {
             5 * 1024 * 1024;
 
     public MenuImageStorageService(
-            @Value("${app.upload.menu-dir}") String directory
+            @Value("${app.upload.menu-dir:uploads/menu}") String directory
     ) {
         this.uploadDirectory = Paths.get(directory)
                 .toAbsolutePath()
