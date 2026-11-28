@@ -11,21 +11,17 @@ import java.nio.file.Paths;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
-    @Value("${app.upload.menu-dir}")
+    @Value("${app.upload.menu-dir:uploads/menu}")
     private String uploadDirectory;
 
     @Override
-    public void addResourceHandlers(
-            ResourceHandlerRegistry registry
-    ) {
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
         Path imagePath = Paths.get(uploadDirectory)
                 .toAbsolutePath()
                 .normalize();
 
         registry.addResourceHandler("/uploads/menu/**")
-                .addResourceLocations(
-                        imagePath.toUri().toString()
-                );
+                .addResourceLocations(imagePath.toUri().toString());
     }
 }
