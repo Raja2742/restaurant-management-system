@@ -1,6 +1,7 @@
 import { Client } from "@stomp/stompjs";
 
-const SOCKET_URL = "ws://localhost:8080/ws";
+const SOCKET_URL =
+    import.meta.env.VITE_WS_URL || "ws://localhost:8080/ws";
 
 export const connectWebSocket = (destination, onMessage) => {
 
@@ -24,20 +25,12 @@ export const connectWebSocket = (destination, onMessage) => {
             client.subscribe(destination, (message) => {
 
                 try {
-
                     const event = JSON.parse(message.body);
-
                     console.log("WebSocket Event:", event);
-
                     onMessage(event);
 
                 } catch (error) {
-
-                    console.error(
-                        "Failed to parse WebSocket message:",
-                        error
-                    );
-
+                    console.error("Failed to parse WebSocket message:", error);
                 }
 
             });
@@ -45,10 +38,7 @@ export const connectWebSocket = (destination, onMessage) => {
         },
 
         onStompError: (frame) => {
-            console.error(
-                "STOMP error:",
-                frame.headers["message"]
-            );
+            console.error("STOMP error:", frame.headers["message"]);
         },
 
         onWebSocketError: (error) => {
