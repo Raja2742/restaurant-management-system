@@ -3,8 +3,7 @@ FROM maven:3.9-eclipse-temurin-21 AS build
 
 WORKDIR /app
 
-# Increase Maven dependency download retries
-ENV MAVEN_OPTS="-Daether.connector.http.retryHandler.count=10"
+COPY settings.xml /root/.m2/settings.xml
 
 COPY pom.xml .
 
