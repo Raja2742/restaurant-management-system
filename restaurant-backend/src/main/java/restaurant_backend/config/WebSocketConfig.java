@@ -13,7 +13,7 @@ import java.util.Arrays;
 @EnableWebSocketMessageBroker
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
-    @Value("${app.cors.allowed-origins}")
+    @Value("${app.cors.allowed-origins:http://localhost:5173}")
     private String allowedOrigins;
 
     @Override
@@ -26,10 +26,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-
         registry.addEndpoint("/ws")
-                .setAllowedOrigins(
-                        String.valueOf(Arrays.asList(allowedOrigins.split(",")))
-                );
+                .setAllowedOrigins(allowedOrigins.split(","));
     }
 }
